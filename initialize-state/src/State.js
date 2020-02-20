@@ -10,7 +10,7 @@ class State extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="State">
         <h1>My name is: {this.state.name}</h1>
         <p>
           Today, on February 20th 2020, I am learning how to use{" "}
