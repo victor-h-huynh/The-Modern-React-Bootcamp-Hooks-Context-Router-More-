@@ -16,8 +16,8 @@ class RollDice extends Component {
 
   roll() {
     this.setState(state => ({
-      die1: this.die[Math.floor(Math.random() * 5)],
-      die2: this.die[Math.floor(Math.random() * 5)]
+      die1: this.die[Math.floor(Math.random() * this.props.sides.length)],
+      die2: this.die[Math.floor(Math.random() * this.props.sides.length)]
     }));
   }
   render() {
