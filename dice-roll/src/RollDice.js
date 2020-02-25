@@ -22,8 +22,7 @@ class RollDice extends Component {
     const newDie2 = this.props.sides[
       Math.floor(Math.random() * this.props.sides.length)
     ];
-    //set state with new rolls
-
+    //set
     this.setState(state => ({
       die1: newDie1,
       die2: newDie2
