@@ -13,16 +13,16 @@ class RollDice extends Component {
     };
     this.roll = this.roll.bind(this);
   }
-
   roll() {
-    //pick 2 new rolls
+    // generate 2 random dice
     const newDie1 = this.props.sides[
       Math.floor(Math.random() * this.props.sides.length)
     ];
     const newDie2 = this.props.sides[
       Math.floor(Math.random() * this.props.sides.length)
     ];
-    //set
+
+    // change state
     this.setState(state => ({
       die1: newDie1,
       die2: newDie2
@@ -34,7 +34,7 @@ class RollDice extends Component {
       <div>
         <Die face={this.state.die1} />
         <Die face={this.state.die2} />
-        <button onClick={this.roll}>Roll Dice!</button>
+        <button onClick={this.roll}>Click Me!</button>
       </div>
     );
   }
