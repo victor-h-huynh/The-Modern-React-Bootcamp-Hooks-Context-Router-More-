@@ -1,20 +1,29 @@
 import React, { Component } from "react";
+import Ball from "./Ball";
+import "./Lottery.css";
 
 class Lottery extends Component {
   static defaultProps = {
     title: "Lotto",
-    maxBalls: 6,
+    numBalls: 6,
     maxNum: 40
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      nums: []
+      nums: Array.from({ length: this.props.numBalls })
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  generate() {}
+  generate() {
+    this.setState(currentState => ({
+      nums: currentState.nums.map(
+        n => Math.floor(Math.random() * this.props.maxNum) + 1
+      )
+    }));
+  }
 
   handleClick() {
     this.generate();
@@ -23,7 +32,11 @@ class Lottery extends Component {
     return (
       <section className="Lottery">
         <h1>{this.props.title}</h1>
-        <div>Balls go here!</div>
+        <div>
+          {this.state.nums.map(n => (
+            <Ball nums={n} />
+          ))}
+        </div>
         <button onClick={this.handleClick}>Generate</button>
       </section>
     );
