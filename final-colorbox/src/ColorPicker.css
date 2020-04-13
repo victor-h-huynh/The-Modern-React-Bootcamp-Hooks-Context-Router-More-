@@ -1,0 +1,10 @@
+.ColorBox {
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid black;
+}
+
+.ColorPicker {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
