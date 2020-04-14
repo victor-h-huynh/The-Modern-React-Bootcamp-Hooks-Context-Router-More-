@@ -1,24 +1,11 @@
 import React from "react";
 import "./App.css";
-import ColorPicker from "./ColorPicker";
+import BoxContainer from "./BoxContainer";
 
 function App() {
   return (
     <div className="App">
-      <h1>ColorPicker</h1>
-      <ColorPicker />
-      <ColorPicker />
-      <ColorPicker />
-      <ColorPicker />
-      <ColorPicker />
-      <ColorPicker />
-      <ColorPicker />
-      <ColorPicker />
-      <ColorPicker />
-      <ColorPicker />
-      <ColorPicker />
-      <ColorPicker />
-      <ColorPicker />
+      <BoxContainer />
     </div>
   );
 }
